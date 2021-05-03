@@ -22,7 +22,7 @@ module.exports = config:
     cachebust:
       manifest: 'public/manifest.json'
       environments: ['production']
-      reference: 'index.html'
+      reference: ['index.html']
       extensions: [
         /\.js$/
         /\.css$/
