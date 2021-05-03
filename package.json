@@ -1,12 +1,12 @@
 {
-  "name": "@nerevu/cachebust-brunch",
-  "version": "0.4.2",
+  "name": "@cs42/cachebust-brunch",
+  "version": "0.4.3",
   "description": "Rename assets based on SHA1 hash for cache busting",
   "main": "./lib/index",
-  "homepage": "https://github.com/nerevu/cachebust-brunch",
+  "homepage": "https://github.com/cs42/cachebust-brunch",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/nerevu/cachebust-brunch.git"
+    "url": "git+ssh://git@github.com/cs42/cachebust-brunch.git"
   },
   "scripts": {
     "test": "npm run mocha && npm run cover",
@@ -20,11 +20,11 @@
     "hash",
     "fingerprint"
   ],
-  "author": "Reuben Cummings",
+  "author": "Carsten Schurig",
   "license": "MIT",
   "dependencies": {
-    "fs-extra": "^0.24.0",
-    "debug": "^3.1.0"
+    "debug": "^3.1.0",
+    "fs-extra": "^0.24.0"
   },
   "devDependencies": {
     "chai": "^3.3.0",
@@ -34,7 +34,7 @@
     "nyc": "^15.0.0"
   },
   "bugs": {
-    "url": "https://github.com/nerevu/cachebust-brunch/issues"
+    "url": "https://github.com/cs42/cachebust-brunch/issues"
   },
   "directories": {
     "test": "test"

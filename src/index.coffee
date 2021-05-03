@@ -49,15 +49,16 @@ module.exports = class Cachebust
 
 
   replaceContent: (hashedFiles) =>
-    reference = @options.reference or 'index.html'
-    refFile = "#{@publicFolder}/#{reference}"
-    content = fs.readFileSync(refFile, 'UTF-8')
+    references = @options.reference or ['index.html']
+    references.forEach (reference) =>
+      refFile = "#{@publicFolder}/#{reference}"
+      content = fs.readFileSync(refFile, 'UTF-8')
 
-    Object.entries(hashedFiles).forEach ([inputPath, outputPath]) =>
-      regExp = new RegExp(inputPath)
+      Object.entries(hashedFiles).forEach ([inputPath, outputPath]) =>
+        regExp = new RegExp(inputPath)
 
-      if regExp.test(content)
-        content = content.replace(regExp, outputPath)
-        debug("Replaced #{inputPath} by #{outputPath} in #{refFile}")
+        if regExp.test(content)
+          content = content.replace(regExp, outputPath)
+          debug("Replaced #{inputPath} by #{outputPath} in #{refFile}")
 
-    fs.writeFileSync(refFile, content)
+      fs.writeFileSync(refFile, content)

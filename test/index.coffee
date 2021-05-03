@@ -6,11 +6,11 @@ Cachebust = require('../src/index')
 
 FIXTURES_SHA1SUMS =
   'public/empty.css': 'da39a3ee'
-  'public/oneliner.css': '7638fdaa'
+  'public/oneliner.css': '4fdcfc69'
 
 FIXTURES_OUTPUT =
   'public/empty.css': 'public/empty-da39a3ee.css'
-  'public/oneliner.css': 'public/oneliner-7638fdaa.css'
+  'public/oneliner.css': 'public/oneliner-4fdcfc69.css'
   'public/dot.dot.css': 'public/dot.dot-da39a3ee.css'
 
 buildFilename = (file) ->
